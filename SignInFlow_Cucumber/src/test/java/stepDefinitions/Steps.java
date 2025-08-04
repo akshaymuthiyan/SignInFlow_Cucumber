@@ -19,7 +19,7 @@ public class Steps {
 
     @Before
     public void setUp() {
-        driver = new ChromeDriver();  // WebDriverManager usage recommended for real project
+        driver = new ChromeDriver();  
         driver.manage().window().maximize();
     }
 
@@ -49,13 +49,13 @@ public class Steps {
 
     @And("User enters Email as {string} and Password as {string}")
     public void user_enters_email_and_password(String email, String password) {
-        loginPage.setEmail(email);         // Changed from enterEmail
-        loginPage.setPassword(password);   // Changed from enterPassword
+        loginPage.setEmail(email);         
+        loginPage.setPassword(password);   
     }
 
     @And("Click on SignIn")
     public void click_on_sign_in() {
-        loginPage.clickSignInBtn();        // Changed from clickLogin
+        loginPage.clickSignInBtn();        
     }
 
     @Then("Page Title should be {string}")
@@ -67,7 +67,7 @@ public class Steps {
 
     @When("User click on Sign out link")
     public void user_click_on_sign_out_link() {
-        loginPage.clickUserMenu();  // click on user menu first
+        loginPage.clickUserMenu();  
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
