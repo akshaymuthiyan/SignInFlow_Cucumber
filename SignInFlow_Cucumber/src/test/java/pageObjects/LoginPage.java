@@ -29,7 +29,7 @@ public class LoginPage {
     WebElement btnSignIn;
 
     @FindBy(xpath = "//button[@data-action='customer-menu-toggle']")
-    public WebElement dropdownUserMenu;  // made public for access
+    public WebElement dropdownUserMenu;  
 
     By logoutLinkLocator = By.xpath("//a[text()='Sign Out']");
 
@@ -60,7 +60,7 @@ public class LoginPage {
     }
 
     public void clickLogout() {
-        driver.findElement(logoutLinkLocator).click();  // ✅ uses the defined locator
+        driver.findElement(logoutLinkLocator).click(); 
     }
 
 }
